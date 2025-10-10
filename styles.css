@@ -61,29 +61,29 @@ body {
 
 h1 {
     font-size: xx-large;
-    color: rgba(0, 0, 255, 0.47)
+    color: rgba(0, 0, 255, 0.47); 
+    font-weight: bold;
 }
 
 h2 {
-    
+    font-size: x-large;
+    color: black;
 }
 
 h3 {
-    
+    color: purple;
 }
 
 h4 {
-    
+    font-size: small;
 }
 
 p {
+  font-style: oblique;
     
 }
 
-a,
-a * {
-    
-}
+
 
 button {
     /* Example Style, replace with your own! */
@@ -95,9 +95,7 @@ button {
     cursor: pointer;            /* makes the cursor change when over button */
 }
 
-button:hover {
-    /* Make the button look different when the user hovers over it */
-}
+
 
 /*** header ***
   
@@ -110,9 +108,8 @@ button:hover {
   - [ ] Any time after
 ***/
 
-.header { /* Example A: This styles elements with class="header" */
-    
-}
+   
+
 
 /*** footer ***
   
@@ -124,9 +121,6 @@ button:hover {
   - [ ] Any time after
 ***/
 
-.footer { /* Example B: This styles elements with class="footer" */
-    
-}
 
 /*** Navbar [PLACEHOLDER] [ADDED IN UNIT 4] ***/
 
