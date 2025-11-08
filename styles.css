@@ -181,9 +181,24 @@ button {
     --bg-color: #a6a0cf;
     --text-color: #231942;
 
-    /* Dark Mode */
-    --bg-color-dark-mode: #3e3377;
-    --text-color-dark-mode: #fff;
+/* Default dark mode style */
+
+
+
+/* Customize Dark Mode Theme */
+.dark-mode {
+
+}
+
+/* Example: Different dark mode style for h1 */
+.dark-mode h1 {
+    
+}
+
+/* Example: Different dark mode style for visited links */
+.dark-mode a:visited * {
+
+}
 
     /* Accent Colors */
     --accent-color-light: #d2cff5;
@@ -234,3 +249,59 @@ a:active {
   justify-content: center;
   gap: 8px;
 }
+
+.dark-mode h1 {
+  background-color: black;
+}
+.dark-mode h2 {
+  background-color: black;
+}
+.dark-mode h3 {
+    color: white;
+    background-color: black;
+}
+
+/*** RSVP Section ***
+  
+  Purpose:
+  - Add style rules for your website's RSVP form
+
+  When To Modify:
+  - [ ] Project 6 (REQUIRED FEATURE)
+  - [ ] Project 7 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.rsvp-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 50px;
+
+}
+
+.rsvp-button{
+  border: #231942;
+}
+.rsvp.para {
+  width: 55%;
+  padding-right: 10px;
+
+}
+
+.rsvp.participants {
+  width: 45%;
+  padding-right: 10px;
+}
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  background-color:#f8bbd0; 
+
+  /* Set border-color and background */
+}
+
+
+/* Add other rsvp-related selectors here */

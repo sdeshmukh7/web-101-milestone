@@ -39,7 +39,7 @@
         -->
         <div style="background-color: yellow;"> 
         <div class="navbar">
-            <img id="header-img" src="./img/logo500.png"/>
+           <!-- <img id="header-img" src="./img/logo500.png"/>-->
             <h1 class="blue">The Spongebob Effect</h1>
             
             
@@ -50,6 +50,7 @@
             
             <button type="button" onclick = "location.href='#home'">Home</button>
             <button type="button" onclick = "location.href='#links'">Links</button>
+                    <li><button id="theme-button">Toggle Dark Mode</button></li> 
             </div>
         </div>
        
@@ -104,7 +105,7 @@
         <h3>Event Activity 2</h3>
         <p>Description of event activity.</p>
  
-        <img alt="Image description" src="./img/example.png"/>
+        <!--<img alt="Image description" src="./img/example.png"/>-->
         <h3>Event Activity 2</h3>
         <p>Description of event activity.</p>
 
@@ -138,10 +139,53 @@
             </article>
         </a>
 
-
+         
             
         <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
         <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
-
+    <script src="index.js"></script>  
     </body>
 </html>
+
+<!-- rsvp
+
+Purpose:
+- Section for users to sign up for the event
+- Contains a form for users to input their information, 
+and a list of other users who have signed up
+
+When To Modify:
+- [ ] Project 6 (REQUIRED FEATURE) 
+- [ ] Project 6 (STRETCH FEATURE) 
+- [ ] Any time after
+--> 
+<div id="rsvp">
+    <h2>RSVP</h2>
+    <div class="rsvp-container">
+        
+        <div class="rsvp-para">
+            <!-- info goes here -->
+            <p>RSVP in the form below if you want to learn about the Spongebob Effect</p>
+        </div>
+        <div class="rsvp-participants" id="rsvp-list">
+            <p>🎟️ DJ from Texas has RSVP'd.</p>
+            <p>🎟️ Amy from New York has RSVP'd.</p>
+            <p>🎟️ Teresa from Montana has RSVP'd.</p>
+        </div>
+    </div>
+
+    <!--- Sign RSVP Form --->
+    
+        <form id="rsvp-form" title="rsvp-form" >
+            <div id="listRsvp">
+            <!-- form inputs go here -->
+             <input type="text" id = "name" name = "fname" placeholder="name"  class="form-container" required>
+             <input type="text" id = "email" name = "email" placeholder="email" class="form-container" required>
+             <input type="text" id = "state" name = "state" placeholder="state" class="form-container" required>
+             </div>
+              <!-- Submit button -->
+            <button type="button" id="rsvp-button" class="rsvp-button">Submit RSVP</button>
+        </form>
+       
+    </div>      
+</div> 
