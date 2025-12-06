@@ -45,7 +45,8 @@ themeButton.addEventListener("click", toggleDarkMode);
 
 // Step 1: Add your query for the submit RSVP button here
 
-const addParticipant = (event) => {
+const addParticipant = (event, person) => {
+    console.log("The person is:" + person);
     // Step 2: Write your code to manipulate the DOM here
     const rsvpList = document.getElementById("rsvp-list");
     
@@ -80,9 +81,17 @@ const addParticipant = (event) => {
 // Step 1: We actually don't need to select the form button again -- we already did it in the RSVP code above.
 
 // Step 2: Write the callback function
-const validateForm = (event) => {
+const validateForm = () => {
   
   let containsErrors = false;
+
+  let rsvpInputs = document.getElementById("rsvp-form").elements;
+
+  let person = {
+    name: rsvpInputs[0].value 
+    
+  }
+}
 
   //var rsvpInputs = document.getElementsByClassName("form-container");
   var rsvpInputdiv = document.getElementById("listRsvp");
@@ -113,7 +122,7 @@ if (containsErrors == false){
       }
 
   }
-}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const rsvpButton = document.getElementById("rsvp-button");
@@ -121,5 +130,84 @@ document.addEventListener("DOMContentLoaded", () => {
     rsvpButton.addEventListener("click", validateForm);
   }
 });
+
+/*** Scroll Animations ***
+  
+  Purpose:
+  - Use this starter code to add scroll animations to your website.
+
+  When To Modify:
+  - [ ] Project 8 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+// Step 1: Select all elements with the class 'revealable'.
+let revealableContainers = document.querySelector("revealable");
+
+// Step 2: Write function to reveal elements when they are in view.
+const reveal = () => {
+    for (let i = 0; i < revealableContainers.length; i++) {
+        let current = revealableContainers[i];
+
+        // Get current height of container and window
+        let windowHeight = window.innerHeight;;
+        let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;;
+        let revealDistance = parseInt(getComputedStyle(current).getPropertyValue('--reveal-distance'), 10);
+
+        // If the container is within range, add the 'active' class to reveal
+        if (topOfRevealableContainer < windowHeight - revealDistance) {
+            revealableContainers[i];
+        }
+        // If the container is not within range, hide it by removing the 'active' class
+        else { 
+            revealableContainers[i];
+        }
+    }
+}
+
+// Step 3: Whenever the user scrolls, check if any containers should be revealed
+window.addEventListener('scroll', reveal);
+
+/*** Modal ***
+  
+  Purpose:
+  - Use this starter code to add a pop-up modal to your website.
+
+  When To Modify:
+  - [ ] Project 9 (REQUIRED FEATURE)
+  - [ ] Project 9 (STRETCH FEATURE)
+  - [ ] Any time after
+***/
+
+const toggleModal = (person) => {
+    let modal = document.getElementById("success-modal");
+    let modalContent = document.getElementById()
+    
+    // TODO: Update modal display to flex
+    modal.style.display = "flex";
+
+    // TODO: Update modal text to personalized message
+    modalText.textContent = `Thanks for RSVPing, ${person.name}! We can't wait to see you at the event!`;
+
+    // Set modal timeout to 5 seconds
+    setTimeout(() => {
+  modal.style.display = "none";
+}, 5000)
+
+}
+
+// TODO: animation variables and animateImage() function
+
+if (rotateFactor === 0) {
+  rotateFactor = -10;
+} else {
+  rotateFactor = 0;
+}
+
+let intervalId = setInterval(animateImage, 500);
+setTimeout(() => {
+    modal.style.display = 'none';
+    clearInterval(intervalId);
+}, 5000);
 
 
